@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body{
+        font-family:'Verdana';
+        font-size:11px;
+    }
+    .hero{
+        width:100%;
+    }
+    /* Small Glass */
+    @media screen and (max-width:520px){
+        .text{
+            background:#000;
+            color:#fff;
+            padding:5px;
+        }
+        .hero img{
+            width:100%;
+        }
+    }
+    /* Medium Glass */
+    @media screen and (min-width:521px) and (max-width:860px){
+        .text{
+            -webkit-flow-into:hero-copy;
+            overflow:hidden;
+            color:#fff;
+        }
+        .hero{
+            background:url(img/mountain.png) no-repeat left -150px;
+            height:300px;
+        }
+        .hero img{
+            display:none;
+        }
+        .shape-wrap{
+            width:490px;
+            height:300px;
+            top:0px;
+            left:10px;
+            position:relative;
+        }
+        .shape1 {
+            -webkit-shape-inside:polygon(7.67px 152.00px,40.00px 154.74px,73.33px 173.47px,120.67px 152.47px,153.33px 131.00px,191.50px 128.26px,261.08px 147.90px,349.38px 161.71px,536.67px 229.53px,535.00px 12.53px,7.33px 8.53px);
+        }
+    }
+    /* Large Glass */
+    @media screen and (min-width:861px){
+        .text{
+            -webkit-flow-into:hero-copy;
+            overflow:hidden;
+            color:#fff;
+        }
+        .hero{
+            background:url(img/mountain.png) no-repeat center -150px;
+            height:300px;
+        }
+        .hero img{
+            display:none;
+        }
+        .shape-wrap{
+            width:600px;
+            height:300px;
+            margin:0 auto;
+            top:30px;
+            left:100px;
+            position:relative;
+        }
+        .shape1 {
+            -webkit-shape-inside:polygon(17.67px 127.00px,106.92px 151.50px,169.17px 140.00px,257.92px 172.26px,297.79px 208.90px,369.26px 245.06px,412.73px 264.21px,462.70px 275.37px,536.68px 283.95px,624.67px 279.24px,706.67px 176.89px,713.67px 64.71px,3.00px 64.53px,-2.67px 117.53px);
+        }
+    }
+
+
+    .region{
+        position: absolute;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        overflow: hidden;
+        -webkit-flow-from:hero-copy;
+    }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="img/mountain.png" />
+        <div class="shape-wrap">
+            <div class='region shape1'></div>
+        </div>
+    </div>
+    <div class='text'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae molestie eros. Suspendisse posuere blandit lorem non eleifend. Vestibulum odio ante, mattis eu tristique nec, vestibulum non felis. Maecenas sodales, massa ac euismod vehicula, arcu sem dignissim dolor, eget faucibus magna libero ac turpis. Nam nec posuere sem. Suspendisse sed arcu pellentesque, luctus est id, rhoncus ligula. Maecenas lorem est, tristique sit amet augue volutpat, dignissim sollicitudin ipsum. Donec tortor ipsum, commodo vel porttitor mattis, tempor venenatis risus. Suspendisse non lacus sagittis, scelerisque nisl ac, egestas libero. Nullam tincidunt risus a tristique sollicitudin. Maecenas blandit fermentum vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </div>
+</body>
+</html>
